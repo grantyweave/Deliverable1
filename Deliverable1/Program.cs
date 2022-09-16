@@ -12,8 +12,10 @@ class MainClass
     public static void Main(string[] args)
     {
         {
-            Console.Write("How many people are we making PB&J sandwiches for?");
+            Console.WriteLine("How many people are we making PB&J sandwiches for?" );
+            
             int numberOfSandwichs = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
 
             double totalSlicesNeeded = numberOfSandwichs * 2;
@@ -28,7 +30,21 @@ class MainClass
 
             double totalJarsOfJellyNeeded = Math.Ceiling(teaspoonsOfJellyNeeded / teaspoonsOfJellyPerJar);
 
-            Console.WriteLine($"To make {numberOfSandwichs} sandwiches you will need {totalLoavesNeeded} loaves of bread, {totalJarsOfPBNeeded} jars of Peanut Butter, and {totalJarsOfJellyNeeded} jars of Jelly.");
+            Console.WriteLine("You need:" );
+            Console.WriteLine();
+            Console.WriteLine($"  {totalSlicesNeeded} slices of bread" );
+            Console.WriteLine($"  {tablesspoonsOfPBNeeded} tablespoons of peanut butter" );
+            Console.WriteLine($"  {teaspoonsOfJellyNeeded} teaspoons of jelly" );
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("  which is..." );
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine($"  {totalLoavesNeeded} loaves of bread" );
+            Console.WriteLine($"  {totalJarsOfPBNeeded} jars of peanut butter" );
+            Console.WriteLine($"  {totalJarsOfJellyNeeded} jars of jelly");
+            Console.WriteLine();
+
 
             Console.WriteLine("Would you like to restart? Enter 'yes' or 'y' to continue, or enter any other key to exit.");
             var input = Console.ReadLine();
@@ -42,7 +58,7 @@ class MainClass
                 Environment.Exit(0);
             }
 
-            Console.WriteLine("Goodbye");
+            Console.WriteLine("Goodbye!");
 
         }
     }
